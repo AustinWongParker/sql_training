@@ -1,0 +1,47 @@
+Q: What is the first thing to do when making a sql db?
+A: 
+    1. Launch terminal
+    2. updates if needed 
+        - sudo apt update (unix systems)
+    3. install mysql server 
+        - sudo apt install mysql-server -y
+    4. Make sure service is running 
+        - sudo systemctl status mysql 
+        - should see active (Running)
+        - q to exit the window
+
+Q: How to see / run sql commands?
+A:
+    1. sudo mysql 
+        - this will prompt a mysql cmd prompt
+            - this works because it connects to localhost. For other dbs, you may have to configure your mysql cmd by adding username, server, port, etc
+    2. show databases;
+        - need to use ; after each commands
+    3. create database
+        - create database awp_db;
+    4. use awp_db;
+        - using this specific db 
+    5. show tables;
+        - look at the tables in the specified db
+    6. create table 
+        - create table awp_table (id int, name varchar(255), age int, occupation varchar(255), income int); <-- this will create the columns for your db 
+    7. look at columns in table 
+        - describe awp_table;
+    8. Insert row in your table
+        - insert into awp_table values (1, "Austin", 26, "software engineer", 222)
+    9. grab all data in your table 
+        - select * from awp_table;
+    10. grabbing more specific data
+        - select * from awp_table where age = "26";
+        - select * from awp_table where age = "26" or "20";
+        - select * from awp_table where age < 50;
+    11. remove record from db       
+        - delete from awp_table where name = "deleteme";
+    12. updating record from db 
+        - update awp_table set name = "Jeff" where name = "updateme" 
+    13. Ascending and descending 
+        - select * from awp_table order by age asc;
+        - select * from awp_table order by age desc;
+    14. adding another column(field) to your table
+        - alter table awp_table add alive boolean;
+        - select * from awp_table

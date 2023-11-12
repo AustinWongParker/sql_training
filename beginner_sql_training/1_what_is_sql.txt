@@ -1,0 +1,16 @@
+Basic questions for SQL
+1. What is SQL ?
+    - Structural Query Language
+    - The 'language' to talk to databases
+    - CRUD | Create / Read / Update / Delete
+2. What are fields and records?
+    - Thinking in terms of excel spreadsheet ...
+        - fields are columns
+        - records are rows
+        - tables are the way database objects store its data in the database.
+            - they're organized in row-and-column format.
+            - each row (record) represents a unique record, and each field (column) represents a unique field in the record
+3. Relational DBs?
+    - Tables will have a primary key field (example: id, first_name, last_name, etc) that be referenced by other database tables. When it's referenced, those are called foreign keys
+        - See image for more information (primary_key_and_foreign_keys_image)
+
